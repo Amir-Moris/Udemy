@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet", href="style.css"/>
     <title>Udemy el-8alaba</title>
 
@@ -13,25 +14,36 @@
 
     <nav>
         <div class="leftCorner">
-            <!-- <img src="images/icon_menu.png" alt="menu icon"> -->
-            <img src="images/logo_udemy.svg" alt="udemy logo">
+            <a href="/index.html">
+                <img src="images/logo_udemy.svg" alt="udemy logo"/> 
+            </a>
+            <a href="/index.html">Categories</a>
             
         </div>
-        <div class="searchBar">
-            <form>
-                <div class="child">
-                    <img src="images/icon_search.png" alt="search icon"/>
-                    <input type="text" placeholder="Search for anything"/>
-                </div>
-            </form>
-        </div>
-        
-        <form>
-            <div class="rightCorner">
-                <input type="submit" value="Log in"/>
-                <input type="submit" value="Sign up"/>
-            </div>
+        <form class="search-form">
+            <button type="submit"><i class="fa fa-search"></i></button>
+            <input type="text" placeholder="Search for anything" />
         </form>
+
+        <div class="rightCorner">
+            <ul>
+                <li class="item"><a href="/index.html">Udemy Bussiness</a></li>
+                <li class="item"><a href="/index.html">Teach on Udemy</a></li>
+                <li class="item"><a href="/index.html">
+                    <i class="fa fa-shopping-cart" style="font-size:24px"></i>
+                    </a>
+                </li>
+
+                <li class="log-in"><a href="/index.html">Log in</a></li>
+                <li class="sign-up"><a href="/index.html">Sign up</a></li>
+
+                <li class="item"><a href="/index.html">
+                    <i class="fa fa-globe" style="font-size:24px"></i>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
     </nav>
 
 </body>
