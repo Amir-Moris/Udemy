@@ -1,0 +1,21 @@
+* {
+    background-color: whitesmoke;
+    border-radius: 15px;
+}
+.LogoImg {
+    width: 100px;
+    height: 50px;
+}
+.iconImg {
+    width: 15px;
+    height: 15px;
+}
+.searchBar {
+   border: 0.1px;
+}
+#searchInput {
+   font-size: 18px;
+}
+.searchBar {
+    display: flex;
+}
