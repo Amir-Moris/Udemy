@@ -1,21 +1,30 @@
 * {
     background-color: whitesmoke;
-    border-radius: 15px;
+    border-radius: 15px;  
+    font-size: large;
+    
 }
-.LogoImg {
+body {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+nav {
+    display: flex;
+}
+.leftCorner img {
     width: 100px;
-    height: 50px;
-}
-.iconImg {
-    width: 15px;
-    height: 15px;
-}
-.searchBar {
-   border: 0.1px;
-}
-#searchInput {
-   font-size: 18px;
 }
 .searchBar {
     display: flex;
+    height: 65px;
+    margin-inline: 150px;
+}
+.searchBar .child {
+    display: flex;
+    height: 60%;
+}
+.searchBar .child input[type="text"] {
+    width: 700px;
 }
