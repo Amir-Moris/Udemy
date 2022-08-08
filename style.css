@@ -12,35 +12,34 @@ a:hover {
 body {
     background-color: white;
     margin: 0px;
-    height: 1500px;
+    height: fit-content;
+    width: fit-content;
     /* width: fit-content; */
 }
 nav {
+    padding: 0.8rem;
+    align-items: center;
     background-color: whitesmoke;
     display: flex;
     align-items: center;
     width: auto;
 }
-
-nav .leftCorner a img {
-    width: 100px;
-    height: 40px;
-    margin-right: 20px;
-}
 nav .leftCorner {
-    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav .leftCorner img{
+    width: 120px;
+    padding-right: 3rem;
+    padding-left: 0.5rem;
+}
+nav .search-form {
     display: flex;
     align-items: center;
-    margin-inline-end: 30px;
-    margin-left: 30px;
+    height: 100%;
+    width: 40%;
 }
-
-nav form.search-form{
-    display: flex;
-    align-items: center;
-
-}
-
 nav form.search-form button{
     background-color: transparent;
     border-style: none;
@@ -50,23 +49,27 @@ nav form.search-form button{
     margin-right: 7px;
     cursor: pointer;
 }
+
 nav form.search-form input[type=text] {
-    padding: 10px;
+    font: black;
     font-size: 17px;
     border: 1px solid grey;
-    float: left;
-    width: 700px;
     background: #f1f1f1;
     border-radius: 15px;
+    float: left;
+    height: 40px;
+    width: 100%;
+    min-width: 170px;
 }
+
 nav .rightCorner {
-    width: fit-content;
+    margin-left: auto;
 }
 nav .rightCorner ul {
     display: inline-flex;
     list-style: none;
     align-items: center;
-    /* width: 100%; */
+    width: 100%;
 }
 nav .rightCorner .item a {
     margin-left: 1rem;
@@ -97,7 +100,6 @@ nav .rightCorner .sign-up a {
     background-color: black;
     font-family: sans-serif;
 }
-
 /* **************** */
 .section {
     margin-top: 15px;
