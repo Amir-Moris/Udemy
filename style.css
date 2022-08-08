@@ -127,9 +127,10 @@ nav .rightCorner .sign-up a {
 .content .card2{
     margin-left: 10px;
 }
-
+/* **************** */
 .coursesSection {
     background-color: whitesmoke;
+    padding-left: 1rem;
 }
 .coursesSection h1 {
     font-size: 40px;
@@ -137,6 +138,7 @@ nav .rightCorner .sign-up a {
 }
 
 .coursesSection .courses ul {
+    flex-wrap: wrap;
     display: inline-flex;
     list-style: none;
     align-items: center;
@@ -165,12 +167,13 @@ nav .rightCorner .sign-up a {
 }
 
 .coursesSection .courseCards {
+    flex-wrap: wrap;
     display: inline-flex;
 }
 
-.coursesSection .courseCards .myCourseCard h3{
+.coursesSection .courseCards .myCourseCard{
     max-width: 280px;
-    
+    margin-bottom: 1rem;
 }
 
 .coursesSection .courseCards .myCourseCard p .details{
