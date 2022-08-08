@@ -142,12 +142,18 @@ nav .rightCorner .sign-up a {
     align-items: center;
     width: 100%;
 }
-
-.coursesSection .item {
+.coursesSection .item button{
+    background-color: transparent;
     color: bold;
-    font-weight: 800;
+    font-weight: 600;
     margin-right: 15px;
+    border: 0px;
 }
+.coursesSection .item button:hover{
+    color: white;
+    background-color: black;
+}
+
 .coursesSection .courses .courseContent {
     border: 1px solid lightgray;
     margin: 5px;
@@ -189,4 +195,3 @@ nav .rightCorner .sign-up a {
     font-size: small;
     font-style: inherit;
 }
-
