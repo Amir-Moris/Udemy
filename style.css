@@ -248,7 +248,12 @@ nav .rightCorner .log-in:hover {
     }
     
     .coursesSection .courseCards {
-
+        max-width: 100%;
+        overflow-x: scroll;
+        flex-wrap: nowrap;
+        overflow: auto;
     }
-
+    .coursesSection .courseCards .myCourseCard{
+        padding-left: 1rem;
+    }
 }
