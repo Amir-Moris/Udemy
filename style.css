@@ -1,5 +1,6 @@
 * {
     font-size: large;
+    width: fit-content;
 }
 a {
     color: #3d3c0a;
@@ -13,8 +14,6 @@ body {
     background-color: white;
     margin: 0px;
     height: fit-content;
-    width: fit-content;
-    /* width: fit-content; */
 }
 nav {
     padding: 0.8rem;
@@ -22,7 +21,6 @@ nav {
     background-color: whitesmoke;
     display: flex;
     align-items: center;
-    width: auto;
 }
 nav .leftCorner {
     display: flex;
@@ -63,6 +61,7 @@ nav form.search-form input[type=text] {
 }
 
 nav .rightCorner {
+    display: flex;
     margin-left: auto;
 }
 nav .rightCorner ul {
