@@ -1,27 +1,25 @@
 * {
     font-size: large;
 }
-body {
-    height: 1500px;
-}
-nav {
-    background-color: whitesmoke;
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-nav a{
+a {
     color: #3d3c0a;
     text-decoration: none;
     font-family: sans-serif;
-
 }
 a:hover {
     color: blueviolet;
 }
 body {
-    margin: 0px;
     background-color: white;
+    margin: 0px;
+    height: 1500px;
+    /* width: fit-content; */
+}
+nav {
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    width: auto;
 }
 
 nav .leftCorner a img {
@@ -61,14 +59,17 @@ nav form.search-form input[type=text] {
     background: #f1f1f1;
     border-radius: 15px;
 }
+nav .rightCorner {
+    width: fit-content;
+}
 nav .rightCorner ul {
     display: inline-flex;
     list-style: none;
     align-items: center;
-    width: 100%;
+    /* width: 100%; */
 }
 nav .rightCorner .item a {
-    margin-left: 20px;
+    margin-left: 1rem;
 }
 nav .rightCorner .log-in {
     color: black;
@@ -106,26 +107,34 @@ nav .rightCorner .sign-up a {
     margin-inline: 10%;
 }
 .content {
-    display: block;
+    flex-wrap: wrap;
+    display: flex;
     width: 100%;
     flex-wrap: wrap;
     background-color: whitesmoke;
 }
 .content .card1{
-    padding-top: 15px;
-    padding-left: 15px;
+    width: 45%;
     display: block;
+    padding: 1rem;
+    background-color: aliceblue;
 }
 .content .card1 h1{
-    display: block;
+    padding-left: 2rem;
     font-size: 40px;
 }
 .content .card1 p{
-    display: block;
+    padding-left: 2rem;
     font-size: 30px;
 }
 .content .card2{
-    margin-left: 10px;
+    width: 50%;
+    background-color: transparent;
+}
+.content .card2 img{
+    display: flex;
+    width: auto;
+    margin: auto;
 }
 /* **************** */
 .coursesSection {
@@ -146,6 +155,7 @@ nav .rightCorner .sign-up a {
 }
 .coursesSection .item button{
     background-color: transparent;
+    cursor: pointer;
     color: bold;
     font-weight: 600;
     margin-right: 15px;
