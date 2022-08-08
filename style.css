@@ -1,44 +1,50 @@
 * {
+    font-size: large;
+}
+body {
+    height: 1500px;
+}
+nav {
     background-color: whitesmoke;
-    font-size: large;  
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 nav a{
     color: #3d3c0a;
     text-decoration: none;
     font-family: sans-serif;
+
 }
 a:hover {
     color: blueviolet;
 }
 body {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin: 0px;
+    background-color: white;
 }
-nav {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    position: fixed;
-}
+
 nav .leftCorner a img {
     width: 100px;
     height: 40px;
     margin-right: 20px;
 }
 nav .leftCorner {
+    background-color: transparent;
     display: flex;
     align-items: center;
     margin-inline-end: 30px;
+    margin-left: 30px;
 }
 
 nav form.search-form{
     display: flex;
     align-items: center;
+
 }
 
 nav form.search-form button{
+    background-color: transparent;
     border-style: none;
     display: flex;
     align-items: center;
@@ -90,3 +96,97 @@ nav .rightCorner .sign-up a {
     background-color: black;
     font-family: sans-serif;
 }
+
+/* **************** */
+.section {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-inline: 10%;
+}
+.content {
+    display: block;
+    width: 100%;
+    flex-wrap: wrap;
+    background-color: whitesmoke;
+}
+.content .card1{
+    padding-top: 15px;
+    padding-left: 15px;
+    display: block;
+}
+.content .card1 h1{
+    display: block;
+    font-size: 40px;
+}
+.content .card1 p{
+    display: block;
+    font-size: 30px;
+}
+.content .card2{
+    margin-left: 10px;
+}
+
+.coursesSection {
+    background-color: whitesmoke;
+}
+.coursesSection h1 {
+    font-size: 40px;
+    margin-bottom: auto;
+}
+
+.coursesSection .courses ul {
+    display: inline-flex;
+    list-style: none;
+    align-items: center;
+    width: 100%;
+}
+
+.coursesSection .item {
+    color: bold;
+    font-weight: 800;
+    margin-right: 15px;
+}
+.coursesSection .courses .courseContent {
+    border: 1px solid lightgray;
+    margin: 5px;
+    padding: 10px;
+}
+
+.coursesSection .courses .courseContent p{
+    max-width: 70%;
+}
+
+.coursesSection .courseCards {
+    display: inline-flex;
+}
+
+.coursesSection .courseCards .myCourseCard h3{
+    max-width: 280px;
+    
+}
+
+.coursesSection .courseCards .myCourseCard p .details{
+    font: small;
+}
+.coursesSection .courseCards .myCourseCard .rating {
+    font-size: large;
+    color: orange;
+    margin-bottom: 0.5rem;
+}
+.coursesSection .courseCards .myCourseCard .rating .ratingNum{
+    font-size: small;
+    color: black;
+}
+
+.coursesSection .courseCards .myCourseCard .price .realPrice{
+    font-style: italic;
+    font-weight: 1000;
+    margin-right: 0.2rem;
+}
+.coursesSection .courseCards .myCourseCard .price del{
+    font-size: small;
+    font-style: inherit;
+}
+
