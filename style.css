@@ -15,6 +15,9 @@ body {
     height: fit-content;
     width: fit-content;
 }
+
+/**************************** navigation bar ****************************/
+
 nav {
     padding: 0.8rem;
     align-items: center;
@@ -85,21 +88,26 @@ nav .rightCorner .log-in a {
     color: #3d3c0a;
     text-decoration: none;
     font-family: sans-serif;
+    background-color: transparent;
 }
 nav .rightCorner .sign-up {
+    color: white;
     background-color: black;
     padding: 0.6rem;
-    color: white;
     font-weight: 1000;
 }
-
 nav .rightCorner .sign-up a {
     color: white;
-    text-decoration: none;
-    background-color: black;
-    font-family: sans-serif;
+    background-color: transparent;
 }
-/* **************** */
+
+nav .rightCorner .sign-up:hover,
+nav .rightCorner .log-in:hover {
+    background-color: #777;
+}
+
+/****************************  ****************************/
+
 .section {
     margin-top: 15px;
     margin-bottom: 15px;
@@ -115,6 +123,7 @@ nav .rightCorner .sign-up a {
     background-color: whitesmoke;
 }
 .content .card1{
+    justify-content: center;
     width: 45%;
     display: block;
     padding: 1rem;
@@ -131,6 +140,7 @@ nav .rightCorner .sign-up a {
 .content .card2{
     width: 50%;
     background-color: transparent;
+    justify-content: center;
 }
 .content .card2 img{
     display: flex;
@@ -164,7 +174,7 @@ nav .rightCorner .sign-up a {
 }
 .coursesSection .item button:hover{
     color: white;
-    background-color: black;
+    background-color: #777;
 }
 
 .coursesSection .courses .courseContent {
@@ -208,4 +218,37 @@ nav .rightCorner .sign-up a {
 .coursesSection .courseCards .myCourseCard .price del{
     font-size: small;
     font-style: inherit;
+}
+
+/**************************** small screen ****************************/
+@media only screen and (min-width: 1000px){
+    nav .leftCorner .menu-bar{
+        display: none;
+    }
+    nav .leftCorner img{
+        padding-left: 1rem;
+    }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    nav .search-form, nav .rightCorner{
+        display: none;
+    }
+    nav .leftCorner {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .section .content{
+        flex-direction: column-reverse;
+    }
+    .section .content .card1, .section .content .card2{
+        width: auto;
+    }
+    
+    .coursesSection .courseCards {
+
+    }
+
 }
