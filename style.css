@@ -1,62 +1,63 @@
 * {
-    font-size: medium;
+  font-size: medium;
 }
 body {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    min-width: 400px;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  min-width: 400px;
 }
 
 /* nav bar styles*/
 nav {
-    padding: 10px 25px;
-    margin-bottom: 2%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    box-shadow: 0px 0px 0px 3.5px whitesmoke;
+  padding: 10px 25px;
+  margin-bottom: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 0px 0px 0px 3.5px whitesmoke;
 }
 nav img {
-    width: 5rem;
+  width: 5rem;
 }
 a {
-    color: #3d3c0a;
-    text-decoration: none;
-    font-family: sans-serif;
+  color: #3d3c0a;
+  text-decoration: none;
+  font-family: sans-serif;
 }
 nav button {
-    cursor: pointer;
+  cursor: pointer;
 }
 a:hover {
-    color: blueviolet;
+  color: blueviolet;
 }
 
 /* search bar */
 nav form {
-    background-color: white;
-    border: 1px solid grey;
-    padding: 10px;
-    display: flex;
-    width: auto;
-    justify-content: space-between;
-    border-radius: 20px;
-    gap: 10px;
-    align-items: flex-start;
-    display: flex;
-    align-items: center;
-    flex-grow: 1;    
+  background-color: white;
+  border: 1px solid grey;
+  padding: 10px;
+  display: flex;
+  width: auto;
+  justify-content: space-between;
+  border-radius: 20px;
+  gap: 10px;
+  align-items: flex-start;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
 }
 nav form input[type="text"] {
-    width: 100%;
-    outline: none;
-    border: none;
-    padding-right: 0.5rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding-right: 0.5rem;
 }
 
 /* login and signup */
-.login, .signup {
+.login,
+.signup {
   padding: 10px 10px;
   font-weight: bold;
   border: 1px black solid;
@@ -65,234 +66,235 @@ nav form input[type="text"] {
   background-color: white;
 }
 .signup {
-    color: white;
-    background-color: black;
-    margin-left: 0.6rem;
+  color: white;
+  background-color: black;
+  margin-left: 0.6rem;
 }
 .signup:hover {
-    background-color: #777;
+  background-color: #777;
 }
 .login:hover {
-    background-color: #f7f9fa;
+  background-color: #f7f9fa;
 }
 /* icons */
 nav .menu {
-    display: none;
+  display: none;
 }
-.language, menu{
-    display: flex;
-    align-items: center;
-    align-content: center;
-    padding: 6px;
-    background-color: white;
-    border: 1px solid grey;
+.language,
+menu {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding: 6px;
+  background-color: white;
+  border: 1px solid grey;
 }
 .language:hover {
-    background-color: #f7f9fa;
+  background-color: #f7f9fa;
 }
 
 /* main styles */
 main {
-    margin: 0 10%;
+  margin: 0 10%;
 }
 
 /* offer styles */
 .offer {
-    background-color: #f8f9fb;
-    padding: 50px;
-    width: auto;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    position: relative;
+  background-color: #f8f9fb;
+  padding: 50px;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
 }
 .offer .card {
-    background-color: white;
-    padding: 2%;
-    width: 30%;
-    height: auto;
-    box-shadow: 1px 2px 3px 4px rgba(15, 15, 15, 0.2);
+  background-color: white;
+  padding: 2%;
+  width: 30%;
+  height: auto;
+  box-shadow: 1px 2px 3px 4px rgba(15, 15, 15, 0.2);
 }
 .offer img {
-    width: 20%;
-    position: relative;
-    right: 20%;
+  width: 20%;
+  position: relative;
+  right: 20%;
 }
 .offer h1 {
-    font-size: 3rem;
-    margin: 2px 0;
+  font-size: 3rem;
+  margin: 2px 0;
 }
 .offer p {
-    font-size: larger;
+  font-size: larger;
 }
 
 /* courses styles */
-.courses h1{
-    margin: 2px 0;
-    padding-left: 5px;
-    font-size: 2.2rem;
+.courses h1 {
+  margin: 2px 0;
+  padding-left: 5px;
+  font-size: 2.2rem;
 }
-.courses p{
-    padding-left: 5px;
-    font-size: 1.1rem;
+.courses p {
+  padding-left: 5px;
+  font-size: 1.1rem;
 }
 /* courses tabs */
-.courses-tabs ul{
-    list-style: none;
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 1%;
+.courses-tabs ul {
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1%;
 }
 .courses-tabs ul button {
-    font-family: sans-serif;
-    color: #8b8c8e;
-    font-weight: bold;
-    background-color: transparent;
-    font-size: 1rem;
-    border: 0;
+  font-family: sans-serif;
+  color: #8b8c8e;
+  font-weight: bold;
+  background-color: transparent;
+  font-size: 1rem;
+  border: 0;
 }
 .courses-tabs ul button:hover {
-    cursor: pointer;
-    color: black;
+  cursor: pointer;
+  color: black;
 }
 /* just for example */
 .courses-tabs ul .Python button {
-    color: black;
+  color: black;
 }
 
 /* course content styles */
 .courseContent {
-    border: 1px solid grey;
-    padding: 0 2%;
+  border: 1px solid grey;
+  padding: 0 2%;
 }
 .courseContent .description {
-    margin-bottom: 2%;
+  margin-bottom: 2%;
 }
-.courseContent .description h2{
-    font-size: 1.5rem;
+.courseContent .description h2 {
+  font-size: 1.5rem;
 }
-.courseContent .description p{
-    min-width: 20%;
-    max-width: 60%;
+.courseContent .description p {
+  min-width: 20%;
+  max-width: 60%;
 }
 .courseContent .description .exploreCourse {
-    border: 1px black solid;
-    padding: 10px 10px;
-    font-weight: bold;
-    color: black;
-    font-family: sans-serif;
-    font-size: 1rem;
-    background-color: white;
+  border: 1px black solid;
+  padding: 10px 10px;
+  font-weight: bold;
+  color: black;
+  font-family: sans-serif;
+  font-size: 1rem;
+  background-color: white;
 }
 .courseContent .description .exploreCourse:hover {
-    color: black;
-    background-color: #f7f9fa;
+  color: black;
+  background-color: #f7f9fa;
 }
 
 /* cards styles */
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
 }
 
 /* card styles */
 .container .card {
-    max-width: 280px;
-    margin-bottom: 1rem;
+  max-width: 280px;
+  margin-bottom: 1rem;
 }
-.container .card button{
-    background-color: transparent;
-    cursor: pointer;
-    border: 0;
-    padding: 0;
-    margin: 0;
+.container .card button {
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
 }
-.container .card:hover{
-    padding: 5px 0;
-    cursor: pointer;
+.container .card:hover {
+  padding: 5px 0;
+  cursor: pointer;
 }
-.container .card p .details{
-    font: small;
+.container .card p .details {
+  font: small;
 }
-.container .card .rating span{
-    font-size: large;
-    color: orange;
-    margin-bottom: 0.5rem;
+.container .card .rating span {
+  font-size: large;
+  color: orange;
+  margin-bottom: 0.5rem;
 }
-.container .card label{
-    font-size: small;
-    color: black;
+.container .card label {
+  font-size: small;
+  color: black;
 }
-.container .card .price .realPrice{
-    font-style: italic;
-    font-weight: 1000;
-    margin-right: 0.2rem;
+.container .card .price .realPrice {
+  font-style: italic;
+  font-weight: 1000;
+  margin-right: 0.2rem;
 }
-.container .card .price del{
-    font-size: small;
-    font-style: inherit;
+.container .card .price del {
+  font-size: small;
+  font-style: inherit;
 }
 .container .car:hover {
-    background-color: red;
+  background-color: red;
 }
 /* footer */
 footer {
-    margin-top: 2%;
-    background: #1c1d1f;
+  margin-top: 2%;
+  background: #1c1d1f;
 }
 
 /* small screen and media query */
 @media screen and (max-width: 1200px) {
-    nav a,
-    nav button, 
-    nav .login,
-    nav.signup {
-        font-size: small;
-    }
-    nav {
-        gap: 15px;
-    }
-    .courseContent .description {
-        margin-bottom: 3%;
-    }
+  nav a,
+  nav button,
+  nav .login,
+  nav.signup {
+    font-size: small;
+  }
+  nav {
+    gap: 15px;
+  }
+  .courseContent .description {
+    margin-bottom: 3%;
+  }
 }
 @media screen and (max-width: 900px) {
-    /* nav bar */
-    nav {
-      flex-direction: row-reverse;
-    }
-    nav .item, 
-    nav form, 
-    nav .cart, 
-    nav .login,
-    nav .signup,
-    nav .language {
-        display: none;
-    }
-    nav .menu {
-        display: flex;
-    }
+  /* nav bar */
+  nav {
+    flex-direction: row-reverse;
+  }
+  nav .item,
+  nav form,
+  nav .cart,
+  nav .login,
+  nav .signup,
+  nav .language {
+    display: none;
+  }
+  nav .menu {
+    display: flex;
+  }
 
-    /* offer */
-    main .offer img {
-        position: static;
-        width: 40%;
-    }
-    main .offer {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        padding: 0;
-    }
-    main .offer .card {
-        width: 100%;
-        box-shadow: none;
-    }
-    /* courses */
-    .courseContent .description {
-        margin-bottom: 4%;
-    }
+  /* offer */
+  main .offer img {
+    position: static;
+    width: 40%;
+  }
+  main .offer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 0;
+  }
+  main .offer .card {
+    width: 100%;
+    box-shadow: none;
+  }
+  /* courses */
+  .courseContent .description {
+    margin-bottom: 4%;
+  }
 }
