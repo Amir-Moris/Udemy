@@ -27,6 +27,8 @@ a {
   font-family: sans-serif;
 }
 nav button {
+  background-color: transparent;
+  border: 0;
   cursor: pointer;
 }
 a:hover {
@@ -213,15 +215,23 @@ main {
   margin: 0;
 }
 .container .card:hover {
-  padding: 5px 0;
   cursor: pointer;
 }
-.container .card p .details {
+.container img {
+  width: 99%;
+}
+.container .card p .author {
   font: small;
 }
 .container .card .rating span {
   font-size: large;
   color: orange;
+  margin-bottom: 0.5rem;
+}
+
+.container .card .rating span.fa-star-o {
+  font-size: large;
+  color: black;
   margin-bottom: 0.5rem;
 }
 .container .card label {
