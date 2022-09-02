@@ -50,6 +50,7 @@ nav form {
   align-items: center;
   flex-grow: 1;
 }
+
 nav form input[type="text"] {
   width: 100%;
   outline: none;
@@ -207,6 +208,9 @@ main {
   max-width: 280px;
   margin-bottom: 1rem;
 }
+.container .card:hover {
+  color: rgba(15, 15, 15, 0.2);
+}
 .container .card button {
   background-color: transparent;
   cursor: pointer;
@@ -218,7 +222,7 @@ main {
   cursor: pointer;
 }
 .container img {
-  width: 99%;
+  width: 100%;
 }
 .container .card p .author {
   font: small;
@@ -227,6 +231,7 @@ main {
   font-size: large;
   color: orange;
   margin-bottom: 0.5rem;
+  margin-right: 0.2rem;
 }
 
 .container .card .rating span.fa-star-o {
@@ -241,7 +246,7 @@ main {
 .container .card .price .realPrice {
   font-style: italic;
   font-weight: 1000;
-  margin-right: 0.2rem;
+  margin-right: 0.4rem;
 }
 .container .card .price del {
   font-size: small;

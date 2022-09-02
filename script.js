@@ -1,42 +1,33 @@
 let activeTab = "Python";
-
-cardDetails = {
-  image: "",
-  title: "",
-  author: "",
-  rating: 0.0,
-  ratingNum: 0,
-  price: 0,
-  beforeOffer: -1,
-};
-function generateCard() {
+// course lectures
+async function generateCard(lecture) {
   // create lectureCard
   let card = document.createElement("div");
   card.className = "card";
   // lectureCard image
   let courseImg = document.createElement("img");
-  courseImg.src = cardDetails.image;
+  courseImg.src = lecture["image"];
   courseImg.alt = "course image";
   card.appendChild(courseImg);
   // lectureCard title
   let title = document.createElement("h3");
   title.className = "title";
-  title.innerHTML = cardDetails.title;
+  title.innerHTML = lecture["title"];
   card.appendChild(title);
   // lectureCard author name
   let author = document.createElement("p");
   author.className = "author";
-  author.innerHTML = cardDetails.author;
+  author.innerHTML = lecture["author"];
   card.appendChild(author);
   // lectureCard rating
   let rating = document.createElement("div");
   rating.className = "rating";
   let ratingRatio = document.createElement("span");
   ratingRatio.className = "checked";
-  ratingRatio.innerHTML = cardDetails.rating;
+  ratingRatio.innerHTML = lecture["rating"];
   rating.appendChild(ratingRatio);
   // lectureCard star rating
-  for (let i = 1, myrating = cardDetails.rating; i <= 5; i++, myrating--) {
+  for (let i = 1, myrating = lecture["rating"]; i <= 5; i++, myrating--) {
     let star = document.createElement("span");
     if (myrating >= 1) {
       star.className = "fa fa-star checked";
@@ -49,42 +40,74 @@ function generateCard() {
   }
   // lectureCard number of ratings
   let ratinglabel = document.createElement("label");
-  ratinglabel.innerHTML = "(" + cardDetails.ratingNum + ")";
+  ratinglabel.innerHTML = "(" + lecture["ratings"] + ")";
   rating.appendChild(ratinglabel);
   card.appendChild(rating);
   // lectureCard price
   let price = document.createElement("div");
   price.className = "price";
   let realprice = document.createElement("span");
-  realprice.innerHTML = cardDetails.price;
+  realprice.className = "realPrice";
+  realprice.innerHTML = "E£ " + lecture["price"];
   price.appendChild(realprice);
   // lectureCard offer if exist
-  if (cardDetails.offer != -1) {
+  if (lecture["beforeOffer"] != -1) {
     let price_without_offer = document.createElement("del");
-    price_without_offer.innerHTML = cardDetails.beforeOffer;
+    price_without_offer.innerHTML = "E£ " + lecture["beforeOffer"];
     price.appendChild(price_without_offer);
   }
   card.appendChild(price);
-
-  document.querySelector(".container").appendChild(card);
+  document.querySelector(".courseContent .container").appendChild(card);
 }
-const newFetch = fetch("http://localhost:3000/" + activeTab).then(
+const fetchCourse = fetch("http://localhost:3000/" + activeTab).then(
   (response) => {
     let jsondata = response.json();
     return jsondata;
   }
 );
-
-newFetch.then((course) => {
-  let courseLectures = course["Lectures"];
-  for (let Lecture of courseLectures) {
-    cardDetails.image = Lecture["image"];
-    cardDetails.title = Lecture["title"];
-    cardDetails.author = Lecture["author"];
-    cardDetails.rating = Lecture["rating"];
-    cardDetails.ratingNum = Lecture["ratings"];
-    cardDetails.price = Lecture["price"];
-    cardDetails.beforeOffer = Lecture["beforeOffer"];
-    generateCard();
+fetchCourse.then((course) => {
+  for (let lecture of course["Lectures"]) {
+    generateCard(lecture);
   }
 });
+
+// search bar
+function compareStrings(string, substring) {
+  string = string.toLowerCase();
+  substring = substring.toLowerCase();
+  return string.includes(substring);
+}
+const searchInput = document.querySelector(".search-bar input");
+const searchButton = document.querySelector(".search-bar button");
+function searchData(event) {
+  if (event.key !== "Enter" && event != "Enter") return;
+  // get lectures` data
+  const searchFetch = fetch("http://localhost:3000/" + activeTab)
+    .then((searchResult) => {
+      return searchResult.json();
+    })
+    .then((searchResult) => {
+      // show all lectures
+      for (let lecture of searchResult["Lectures"]) {
+        let temp = document.querySelectorAll(".container .card")[lecture["id"]];
+        temp.style.cssText = "display: inline";
+      }
+
+      // show all courses in case the search value is empty
+      if (searchInput.value.length === 0) return;
+      for (let lecture of searchResult["Lectures"]) {
+        let title = compareStrings(lecture["title"], searchInput.value);
+        let author = compareStrings(lecture["author"], searchInput.value);
+        let price = compareStrings(lecture["price"], searchInput.value);
+        console.log(title, author, price);
+        if (title === false && author === false && price === false) {
+          let temp =
+            document.querySelectorAll(".container .card")[lecture["id"]];
+          temp.style.cssText = "display: none";
+        }
+      }
+    })
+    .then(() => (searchInput.value = "")); // clear search bar input
+}
+searchInput.addEventListener("keyup", () => searchData(this.event));
+searchButton.addEventListener("click", () => searchData("Enter"));

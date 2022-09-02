@@ -18,14 +18,12 @@
       <a href="#"> <img src="images/Udemy.png" alt="udemy logo" /> </a>
       <a class="item" href="">Categories</a>
 
-      <form class="search-bar">
-        <a href="#">
-          <button
-            onclick="searchData()"
-            class="fa fa-search"
-            style="font-size: 20px"
-          ></button>
-        </a>
+      <form class="search-bar" onSubmit="return false;">
+        <button
+          type="button"
+          class="fa fa-search"
+          style="font-size: 20px"
+        ></button>
         <input type="text" placeholder="Search for anything" />
       </form>
 
