@@ -3,14 +3,14 @@ let activeTab = "Python";
 async function generateCard(lecture) {
   // create lectureCard
   let card = document.createElement("div");
-  card.className = "card";
+  card.className = "lectureCard";
   // lectureCard image
   let courseImg = document.createElement("img");
   courseImg.src = lecture["image"];
   courseImg.alt = "course image";
   card.appendChild(courseImg);
   // lectureCard title
-  let title = document.createElement("h3");
+  let title = document.createElement("h6");
   title.className = "title";
   title.innerHTML = lecture["title"];
   card.appendChild(title);
@@ -57,7 +57,7 @@ async function generateCard(lecture) {
     price.appendChild(price_without_offer);
   }
   card.appendChild(price);
-  document.querySelector(".courseContent .container").appendChild(card);
+  document.querySelector(".card-wrapper").appendChild(card);
 }
 const fetchCourse = fetch("http://localhost:3000/" + activeTab).then(
   (response) => {
@@ -89,7 +89,9 @@ function searchData(event) {
     .then((searchResult) => {
       // show all lectures
       for (let lecture of searchResult["Lectures"]) {
-        let temp = document.querySelectorAll(".container .card")[lecture["id"]];
+        let temp = document.querySelectorAll(".container .lectureCard")[
+          lecture["id"]
+        ];
         temp.style.cssText = "display: inline";
       }
 
@@ -101,8 +103,9 @@ function searchData(event) {
         let price = compareStrings(lecture["price"], searchInput.value);
         console.log(title, author, price);
         if (title === false && author === false && price === false) {
-          let temp =
-            document.querySelectorAll(".container .card")[lecture["id"]];
+          let temp = document.querySelectorAll(".container .lectureCard")[
+            lecture["id"]
+          ];
           temp.style.cssText = "display: none";
         }
       }
