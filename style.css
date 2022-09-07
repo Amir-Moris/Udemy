@@ -80,12 +80,12 @@ nav form input[type="text"] {
   margin-left: 0.6rem;
 }
 
-.signup:hover {
-  background-color: #777;
-}
-
 .login:hover {
   background-color: #f7f9fa;
+}
+
+.signup:hover {
+  background-color: #777;
 }
 
 /* icons */
@@ -182,15 +182,10 @@ main {
   color: black;
 }
 
-/* just for example */
-.courses-tabs ul .Python button {
-  color: black;
-}
-
 /* course content styles */
 .courseContent {
-  border: 1px solid grey;
-  padding: 0 2%;
+  border: 1px solid #ccc;
+  padding: 0 1%;
 }
 
 .courseContent .description {
@@ -221,17 +216,71 @@ main {
   background-color: #f7f9fa;
 }
 
-/* cards styles */
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1%;
+/* lectures carousel*/
+.courseLectures {
+  margin-bottom: 1em;
+}
+
+.carousel-container {
+  position: relative;
+  width: 1500px;
+  max-width: 100%;
+}
+
+.carousel-container .carousel-inner {
+  overflow: hidden;
+}
+
+.carousel-container .track {
+  display: inline-flex;
+  transition: transform 0.5s;
+}
+
+.carousel-container .card-container {
+  flex-shrink: 0;
+  padding-right: 15px;
+  box-sizing: border-box;
+  width: 300px;
+}
+
+.carousel-buttons button {
+  color: white;
+  background-color: black;
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  border-radius: 50%;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.carousel-buttons button:hover {
+  background-color: #777;
+}
+
+.carousel-buttons button.prev {
+  display: none;
+  left: -25px;
+}
+
+.carousel-buttons button.next {
+  right: -25px;
 }
 
 /* card styles */
 .lectureCard {
-  max-width: 250px;
-  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+}
+
+.lectureCard>* {
+  flex: 1;
 }
 
 .lectureCard:hover {
@@ -241,35 +290,43 @@ main {
 .lectureCard button {
   background-color: transparent;
   cursor: pointer;
-  border: 0;
-  padding: 0;
-  margin: 0;
 }
 
 .lectureCard:hover {
   cursor: pointer;
 }
 
-.lectureCard img {
+.lectureCard .courseImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lectureCard .courseImg img {
+  border-radius: 10px;
   width: 100%;
 }
 
 .lectureCard .author {
   font-size: medium;
-  padding: 0;
   margin: 0;
 }
 
-.lectureCard .rating span {
-  font-size: large;
-  color: orange;
-  margin-right: 0.2rem;
+.lectureCard .title,
+.lectureCard .author,
+.lectureCard .rating,
+.lectureCard .price {
+  padding: 0 0.2rem;
 }
 
-.lectureCard .rating span.fa-star-o {
-  font-size: large;
-  color: black;
-  margin-bottom: 0.5rem;
+.lectureCard .price {
+  flex-grow: 0;
+}
+
+.lectureCard .rating span {
+  font-size: medium;
+  color: orange;
+  margin-right: 0.2rem;
 }
 
 .lectureCard label {
@@ -310,6 +367,10 @@ footer {
 
   .courseContent .description {
     margin-bottom: 3%;
+  }
+
+  .carousel-container {
+    width: 65%;
   }
 }
 
@@ -354,5 +415,16 @@ footer {
   /* courses */
   .courseContent .description {
     margin-bottom: 4%;
+  }
+
+  /* course carousel*/
+  .carousel-container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .carousel-container {
+    width: 60%;
   }
 }
