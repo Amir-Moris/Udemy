@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
 
@@ -70,43 +70,37 @@
       <!-- courses list -->
       <div class="courses-tabs">
         <ul>
-          <li class="Python"><button type="submit">Python</button></li>
-          <li class="Excel"><button type="submit">Excel</button></li>
-          <li class="Web_Development">
+          <li class="course Python"><button type="submit">Python</button></li>
+          <li class="course Excel"><button type="submit">Excel</button></li>
+          <li class="course Web_Development">
             <button type="submit">Web Development</button>
           </li>
-          <li class="JavaScript">
+          <li class="course JavaScript">
             <button type="submit">JavaScript</button>
           </li>
-          <li class="DataScience">
+          <li class="course DataScience">
             <button type="submit">Data Science</button>
           </li>
-          <li class="AWS_Certificate">
+          <li class="course AWS_Certificate">
             <button type="submit">AWS Certificate</button>
           </li>
-          <li class="Drawing"><button type="submit">Drawing</button></li>
+          <li class="course Drawing"><button type="submit">Drawing</button></li>
         </ul>
       </div>
 
       <!-- course content -->
       <section class="courseContent">
         <div class="description">
-          <h2>Expand your career opportunities with Python</h2>
-          <p>
-            Take one of Udemy`s range of Python courses and learn how to code
-            using this in credibly useful language. Its simple syntax and
-            readability makes Python perfect for Flask, Django, data science,
-            and machine learning. You`ll learn how to build everything from
-            games to sites to apps. Choose from a range of courses that will
-            appeal to...
-          </p>
-          <a class="exploreCourse" href="#">Explore Python</a>
+          <h2 class="header"></h2>
+          <p class="details"></p>
+          <a class="exploreCourse" href="#">Explore</a>
         </div>
 
         <section class="courseLectures">
           <div class="carousel-container">
             <div class="carousel-inner">
               <div class="track"></div>
+              <br />
             </div>
 
             <div class="carousel-buttons">
@@ -119,10 +113,59 @@
             </div>
           </div>
         </section>
+      </section>
 
+      <!-- Top Categories section-->
+      <section class="top-categories">
+        <h3>Top Categories</h3>
+        <br />
+        <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-1">
+          <div class="col">
+            <img width="300px" class="card-img-top" src="images/categories/design.jpg" alt="design category" />
+            <h5 class="card-title">Design</h5>
+          </div>
+
+          <div class="col">
+            <img width="300px" class="card-img-top" src="images/categories/development.jpg"
+              alt="development category" />
+            <h5 class="card-title">Development</h5>
+          </div>
+
+          <div class="col">
+            <img width="300px" class="card-img-top" src="images/categories/marketing.jpg" alt="marketing category" />
+            <h5 class="card-title">Marketing</h5>
+          </div>
+
+          <div class="col">
+            <img width="300px" class="card-img-top" src="images/categories/it and software.jpg"
+              alt="it and software category" />
+            <h5 class="card-title">It and Software</h5>
+          </div>
+
+          <div class="col">
+            <img width="300px" class="card-img-top" src="images/categories/personal development.jpg"
+              alt="personal development category" />
+            <h5 class="card-title">Personal Development</h5>
+          </div>
+          <div class="col">
+            <img width="300px" class="card-img-top" src="images/categories/business.jpg" alt="Business category" />
+            <h5 class="card-title">Business</h5>
+          </div>
+
+          <div class="col">
+            <img width="300px" class="card-img-top" src="images/categories/photography.jpg"
+              alt="photography category" />
+            <h5 class="card-title">Photography</h5>
+          </div>
+
+          <div class="col">
+            <img width="300px" class="card-img-top" src="images/categories/music.jpg" alt="music category" />
+            <h5 class="card-title">Music</h5>
+          </div>
+
+        </div>
       </section>
   </main>
-
 
   <footer>
     <br />

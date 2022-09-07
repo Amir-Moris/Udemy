@@ -178,7 +178,7 @@ main {
 }
 
 .courses-tabs ul button:hover {
-  cursor: pointer;
+  transform: scale(1.1);
   color: black;
 }
 
@@ -234,6 +234,7 @@ main {
 .carousel-container .track {
   display: inline-flex;
   transition: transform 0.5s;
+  margin: 0.5rem 0;
 }
 
 .carousel-container .card-container {
@@ -272,7 +273,6 @@ main {
 .lectureCard {
   display: flex;
   flex-direction: column;
-  border: 1px solid #aaa;
   box-sizing: border-box;
   border-radius: 5px;
   height: 100%;
@@ -284,7 +284,8 @@ main {
 }
 
 .lectureCard:hover {
-  color: rgba(15, 15, 15, 0.2);
+  transform: scale(1.03);
+  transition: transform 0.2s;
 }
 
 .lectureCard button {
@@ -343,6 +344,30 @@ main {
 .lectureCard .price del {
   font-size: small;
   font-style: inherit;
+}
+
+/* Top Categories */
+.top-categories {
+  margin-top: 1.5rem;
+}
+
+.top-categories h3 {
+  font-weight: 700;
+}
+
+.top-categories .col {
+  cursor: pointer;
+  margin-top: 3rem;
+  border-radius: 50%;
+}
+
+.top-categories .col img {
+  padding-bottom: 1rem;
+}
+
+.top-categories .col img:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s;
 }
 
 /* footer */
