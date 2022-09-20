@@ -1,118 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" , href="style.css" />
-    <title>Udemy el-8alaba</title>
-  </head>
 
-  <body>
-    <!-- nav bar -->
-    <nav>
-      <a href="#"> <img src="images/Udemy.png" alt="udemy logo" /> </a>
-      <a class="item" href="">Categories</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <form class="search-bar" onSubmit="return false;">
-        <button
-          type="button"
-          class="fa fa-search"
-          style="font-size: 20px"
-        ></button>
-        <input type="text" placeholder="Search for anything" />
-      </form>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
 
-      <a class="item" href="#">Udemy Business</a>
-      <a class="item" href="#">Teach on Udemy</a>
-      <a class="cart" href="#">
-        <span class="fa fa-shopping-cart" style="font-size: 24px"></span>
-      </a>
+  <link rel="stylesheet" href="style.css" />
 
-      <button type="submit" class="login">Log in</button>
-      <button type="submit" class="signup">Sign up</button>
+  <title>Udemy el-8alaba</title>
+</head>
 
-      <button type="submit" class="language">
-        <span class="fa fa-globe" style="font-size: 24px"></span>
-      </button>
+<body>
+  <!-- nav bar -->
+  <nav>
+    <a href="#"> <img src="images/Udemy.png" alt="udemy logo" /> </a>
+    <a class="item" href="">Categories</a>
 
-      <a class="menu">
-        <span class="fa fa-bars" style="font-size: 24px"></span>
-      </a>
-    </nav>
+    <form class="search-bar" onSubmit="return false;">
+      <button type="button" class="bi bi-search" style="font-size: 20px"></button>
+      <input type="text" placeholder="Search for anything" />
+    </form>
 
-    <!-- main -->
-    <main>
-      <section class="offer">
-        <div class="card">
-          <h1>New to Udemy? Lucky you.</h1>
-          <p>
-            Courses start at E£ 169.99. Get your new-student offer before it
-            expires
-          </p>
-        </div>
-        <img src="images/clock.png" alt="clock" />
-      </section>
+    <a class="item" href="#">Udemy Business</a>
+    <a class="item" href="#">Teach on Udemy</a>
+    <a class="cart" href="#">
+      <span class="bi bi-cart-fill" style="font-size: 24px"></span>
+    </a>
 
-      <!-- courses -->
-      <section class="courses">
-        <h1>A board selection of courses</h1>
+    <button type="submit" class="login">Log in</button>
+    <button type="submit" class="signup">Sign up</button>
+
+    <button type="submit" class="language">
+      <span class="bi bi-globe" style="font-size: 24px"></span>
+    </button>
+
+    <a class="menu">
+      <span class="fa fa-bars" style="font-size: 24px"></span>
+    </a>
+  </nav>
+
+  <!-- main -->
+  <main>
+    <section class="offer">
+      <div class="card">
+        <h1>New to Udemy? Lucky you.</h1>
         <p>
-          Choose from 185,000 online video courses with new additions published
-          every month
+          Courses start at E£ 169.99. Get your new-student offer before it
+          expires
         </p>
+      </div>
+      <img src="images/clock.png" alt="clock" />
+    </section>
 
-        <!-- courses list -->
-        <div class="courses-tabs">
-          <ul>
-            <li class="Python"><button type="submit">Python</button></li>
-            <li class="Excel"><button type="submit">Excel</button></li>
-            <li class="Web_Development">
-              <button type="submit">Web Development</button>
-            </li>
-            <li class="JavaScript">
-              <button type="submit">JavaScript</button>
-            </li>
-            <li class="DataScience">
-              <button type="submit">Data Science</button>
-            </li>
-            <li class="AWS_Certificate">
-              <button type="submit">AWS Certificate</button>
-            </li>
-            <li class="Drawing"><button type="submit">Drawing</button></li>
-          </ul>
+    <!-- courses -->
+    <section class="courses">
+      <h1>A board selection of courses</h1>
+      <p>
+        Choose from 185,000 online video courses with new additions published
+        every month
+      </p>
+
+      <!-- courses list -->
+      <div class="courses-tabs">
+        <ul>
+          <li class="course Python"><button type="submit">Python</button></li>
+          <li class="course Excel"><button type="submit">Excel</button></li>
+          <li class="course Web_Development">
+            <button type="submit">Web Development</button>
+          </li>
+          <li class="course JavaScript">
+            <button type="submit">JavaScript</button>
+          </li>
+          <li class="course DataScience">
+            <button type="submit">Data Science</button>
+          </li>
+          <li class="course AWS_Certificate">
+            <button type="submit">AWS Certificate</button>
+          </li>
+          <li class="course Drawing"><button type="submit">Drawing</button></li>
+        </ul>
+      </div>
+
+      <!-- course content -->
+      <section class="courseContent">
+        <div class="description">
+          <h2 class="header"></h2>
+          <p class="details"></p>
+          <a class="exploreCourse" href="#">Explore</a>
         </div>
 
-        <!-- course content -->
-        <section class="courseContent">
-          <div class="description">
-            <h2>Expand your career opportunities with Python</h2>
-            <p>
-              Take one of Udemy`s range of Python courses and learn how to code
-              using this in credibly useful language. Its simple syntax and
-              readability makes Python perfect for Flask, Django, data science,
-              and machine learning. You`ll learn how to build everything from
-              games to sites to apps. Choose from a range of courses that will
-              appeal to...
-            </p>
-            <a class="exploreCourse" href="#">Explore Python</a>
-          </div>
+        <section class="courseLectures">
+          <div class="carousel-container">
+            <div class="carousel-inner">
+              <div class="track"></div>
+              <br />
+            </div>
 
-          <div class="container"></div>
+            <div class="carousel-buttons">
+              <button class="prev">
+                <i class="material-icons">keyboard_arrow_left</i>
+              </button>
+              <button class="next">
+                <i class="material-icons">keyboard_arrow_right</i>
+              </button>
+            </div>
+          </div>
         </section>
       </section>
-    </main>
 
-    <footer>
-      <br />
-      <br />
-      <br />
-    </footer>
+      <!-- Top Categories section-->
+      <section class="top-categories">
+        <h3>Top Categories</h3>
+        <br />
+        <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-1">
+          <div class="col">
+            <img width="300px" class="card-img-top" src="images/categories/design.jpg" alt="design category" />
+            <h5 class="card-title">Design</h5>
+          </div>
 
-    <script src="script.js"></script>
-  </body>
+          <div class="col">
+            <img width="300px" class="card-img-top" src="images/categories/development.jpg"
+              alt="development category" />
+            <h5 class="card-title">Development</h5>
+          </div>
+
+          <div class="col">
+            <img width="300px" class="card-img-top" src="images/categories/marketing.jpg" alt="marketing category" />
+            <h5 class="card-title">Marketing</h5>
+          </div>
+
+          <div class="col">
+            <img width="300px" class="card-img-top" src="images/categories/it and software.jpg"
+              alt="it and software category" />
+            <h5 class="card-title">It and Software</h5>
+          </div>
+
+          <div class="col">
+            <img width="300px" class="card-img-top" src="images/categories/personal development.jpg"
+              alt="personal development category" />
+            <h5 class="card-title">Personal Development</h5>
+          </div>
+          <div class="col">
+            <img width="300px" class="card-img-top" src="images/categories/business.jpg" alt="Business category" />
+            <h5 class="card-title">Business</h5>
+          </div>
+
+          <div class="col">
+            <img width="300px" class="card-img-top" src="images/categories/photography.jpg"
+              alt="photography category" />
+            <h5 class="card-title">Photography</h5>
+          </div>
+
+          <div class="col">
+            <img width="300px" class="card-img-top" src="images/categories/music.jpg" alt="music category" />
+            <h5 class="card-title">Music</h5>
+          </div>
+
+        </div>
+      </section>
+  </main>
+
+  <footer>
+    <br />
+    <br />
+    <br />
+  </footer>
+
+  <!-- scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+
+  <script src="script.js"></script>
+
+</body>
+
 </html>

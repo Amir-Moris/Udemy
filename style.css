@@ -1,6 +1,7 @@
 * {
   font-size: medium;
 }
+
 body {
   box-sizing: border-box;
   margin: 0px;
@@ -18,19 +19,23 @@ nav {
   gap: 30px;
   box-shadow: 0px 0px 0px 3.5px whitesmoke;
 }
+
 nav img {
   width: 5rem;
 }
+
 a {
   color: #3d3c0a;
   text-decoration: none;
   font-family: sans-serif;
 }
+
 nav button {
   background-color: transparent;
   border: 0;
   cursor: pointer;
 }
+
 a:hover {
   color: blueviolet;
 }
@@ -68,21 +73,26 @@ nav form input[type="text"] {
   font-size: 1rem;
   background-color: white;
 }
+
 .signup {
   color: white;
   background-color: black;
   margin-left: 0.6rem;
 }
-.signup:hover {
-  background-color: #777;
-}
+
 .login:hover {
   background-color: #f7f9fa;
 }
+
+.signup:hover {
+  background-color: #777;
+}
+
 /* icons */
 nav .menu {
   display: none;
 }
+
 .language,
 menu {
   display: flex;
@@ -92,6 +102,7 @@ menu {
   background-color: white;
   border: 1px solid grey;
 }
+
 .language:hover {
   background-color: #f7f9fa;
 }
@@ -112,6 +123,7 @@ main {
   flex-wrap: wrap;
   position: relative;
 }
+
 .offer .card {
   background-color: white;
   padding: 2%;
@@ -119,15 +131,18 @@ main {
   height: auto;
   box-shadow: 1px 2px 3px 4px rgba(15, 15, 15, 0.2);
 }
+
 .offer img {
   width: 20%;
   position: relative;
   right: 20%;
 }
+
 .offer h1 {
   font-size: 3rem;
   margin: 2px 0;
 }
+
 .offer p {
   font-size: larger;
 }
@@ -138,10 +153,12 @@ main {
   padding-left: 5px;
   font-size: 2.2rem;
 }
+
 .courses p {
   padding-left: 5px;
   font-size: 1.1rem;
 }
+
 /* courses tabs */
 .courses-tabs ul {
   list-style: none;
@@ -150,6 +167,7 @@ main {
   flex-wrap: wrap;
   gap: 1%;
 }
+
 .courses-tabs ul button {
   font-family: sans-serif;
   color: #8b8c8e;
@@ -158,30 +176,31 @@ main {
   font-size: 1rem;
   border: 0;
 }
+
 .courses-tabs ul button:hover {
-  cursor: pointer;
-  color: black;
-}
-/* just for example */
-.courses-tabs ul .Python button {
+  transform: scale(1.1);
   color: black;
 }
 
 /* course content styles */
 .courseContent {
-  border: 1px solid grey;
-  padding: 0 2%;
+  border: 1px solid #ccc;
+  padding: 0 1%;
 }
+
 .courseContent .description {
   margin-bottom: 2%;
 }
+
 .courseContent .description h2 {
   font-size: 1.5rem;
 }
+
 .courseContent .description p {
   min-width: 20%;
   max-width: 60%;
 }
+
 .courseContent .description .exploreCourse {
   border: 1px black solid;
   padding: 10px 10px;
@@ -191,70 +210,166 @@ main {
   font-size: 1rem;
   background-color: white;
 }
+
 .courseContent .description .exploreCourse:hover {
   color: black;
   background-color: #f7f9fa;
 }
 
-/* cards styles */
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1%;
+/* lectures carousel*/
+.courseLectures {
+  margin-bottom: 1em;
+}
+
+.carousel-container {
+  position: relative;
+  width: 1500px;
+  max-width: 100%;
+}
+
+.carousel-container .carousel-inner {
+  overflow: hidden;
+}
+
+.carousel-container .track {
+  display: inline-flex;
+  transition: transform 0.5s;
+  margin: 0.5rem 0;
+}
+
+.carousel-container .card-container {
+  flex-shrink: 0;
+  padding-right: 15px;
+  box-sizing: border-box;
+  width: 300px;
+}
+
+.carousel-buttons button {
+  color: white;
+  background-color: black;
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  border-radius: 50%;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.carousel-buttons button:hover {
+  background-color: #777;
+}
+
+.carousel-buttons button.prev {
+  display: none;
+  left: -25px;
+}
+
+.carousel-buttons button.next {
+  right: -25px;
 }
 
 /* card styles */
-.container .card {
-  max-width: 280px;
-  margin-bottom: 1rem;
-}
-.container .card:hover {
-  color: rgba(15, 15, 15, 0.2);
-}
-.container .card button {
-  background-color: transparent;
-  cursor: pointer;
-  border: 0;
-  padding: 0;
-  margin: 0;
-}
-.container .card:hover {
-  cursor: pointer;
-}
-.container img {
+.lectureCard {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: 100%;
   width: 100%;
 }
-.container .card p .author {
-  font: small;
+
+.lectureCard>* {
+  flex: 1;
 }
-.container .card .rating span {
-  font-size: large;
+
+.lectureCard:hover {
+  transform: scale(1.03);
+  transition: transform 0.2s;
+}
+
+.lectureCard button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.lectureCard:hover {
+  cursor: pointer;
+}
+
+.lectureCard .courseImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lectureCard .courseImg img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.lectureCard .author {
+  font-size: medium;
+  margin: 0;
+}
+
+.lectureCard .title,
+.lectureCard .author,
+.lectureCard .rating,
+.lectureCard .price {
+  padding: 0 0.2rem;
+}
+
+.lectureCard .price {
+  flex-grow: 0;
+}
+
+.lectureCard .rating span {
+  font-size: medium;
   color: orange;
-  margin-bottom: 0.5rem;
   margin-right: 0.2rem;
 }
 
-.container .card .rating span.fa-star-o {
-  font-size: large;
-  color: black;
-  margin-bottom: 0.5rem;
-}
-.container .card label {
+.lectureCard label {
   font-size: small;
   color: black;
 }
-.container .card .price .realPrice {
+
+.lectureCard .price .realPrice {
   font-style: italic;
   font-weight: 1000;
   margin-right: 0.4rem;
 }
-.container .card .price del {
+
+.lectureCard .price del {
   font-size: small;
   font-style: inherit;
 }
-.container .car:hover {
-  background-color: red;
+
+/* Top Categories */
+.top-categories {
+  margin-top: 1.5rem;
 }
+
+.top-categories h3 {
+  font-weight: 700;
+}
+
+.top-categories .col {
+  cursor: pointer;
+  margin-top: 3rem;
+  border-radius: 50%;
+}
+
+.top-categories .col img {
+  padding-bottom: 1rem;
+}
+
+.top-categories .col img:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s;
+}
+
 /* footer */
 footer {
   margin-top: 2%;
@@ -263,24 +378,34 @@ footer {
 
 /* small screen and media query */
 @media screen and (max-width: 1200px) {
+
   nav a,
   nav button,
   nav .login,
   nav.signup {
     font-size: small;
   }
+
   nav {
     gap: 15px;
   }
+
   .courseContent .description {
     margin-bottom: 3%;
   }
+
+  .carousel-container {
+    width: 65%;
+  }
 }
+
 @media screen and (max-width: 900px) {
+
   /* nav bar */
   nav {
     flex-direction: row-reverse;
   }
+
   nav .item,
   nav form,
   nav .cart,
@@ -289,6 +414,7 @@ footer {
   nav .language {
     display: none;
   }
+
   nav .menu {
     display: flex;
   }
@@ -298,18 +424,32 @@ footer {
     position: static;
     width: 40%;
   }
+
   main .offer {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     padding: 0;
   }
+
   main .offer .card {
     width: 100%;
     box-shadow: none;
   }
+
   /* courses */
   .courseContent .description {
     margin-bottom: 4%;
+  }
+
+  /* course carousel*/
+  .carousel-container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .carousel-container {
+    width: 60%;
   }
 }

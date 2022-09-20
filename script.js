@@ -1,16 +1,53 @@
 let activeTab = "Python";
+// course lectures carousel
+let carouselWidth = document.querySelector(".carousel-container").offsetWidth;
+const next_btn = document.querySelector(".carousel-buttons .next");
+const prev_btn = document.querySelector(".carousel-buttons .prev");
+const track = document.querySelector(".carousel-container .track");
+
+// if the screen size changed
+window.addEventListener("resize", () => {
+  carouselWidth = document.querySelector(".carousel-container").offsetWidth;
+});
+
+function checkOverFlow(width, index, carousel_Width) {
+  return width - index * carousel_Width < carousel_Width;
+}
+// buttons
+let index = 0;
+next_btn.addEventListener("click", () => {
+  index++;
+  track.style.transform = `translateX(-${index * carouselWidth}px)`;
+  prev_btn.style.display = "block";
+  if (checkOverFlow(track.offsetWidth, index, carouselWidth)) {
+    next_btn.style.display = "none";
+  }
+});
+
+prev_btn.addEventListener("click", () => {
+  index--;
+  track.style.transform = `translateX(-${index * carouselWidth}px)`;
+  next_btn.style.display = "block";
+
+  if (index === 0) {
+    prev_btn.style.display = "none";
+  }
+});
 // course lectures
-async function generateCard(lecture) {
+function generateCard(lecture) {
   // create lectureCard
   let card = document.createElement("div");
-  card.className = "card";
+  card.className = "lectureCard";
   // lectureCard image
-  let courseImg = document.createElement("img");
-  courseImg.src = lecture["image"];
-  courseImg.alt = "course image";
+  let courseImg = document.createElement("div");
+  courseImg.className = "courseImg";
+  myImage = document.createElement("img");
+  myImage.src = lecture["image"];
+  myImage.alt = "course image";
+  courseImg.appendChild(myImage);
   card.appendChild(courseImg);
   // lectureCard title
-  let title = document.createElement("h3");
+  let title = document.createElement("h6");
   title.className = "title";
   title.innerHTML = lecture["title"];
   card.appendChild(title);
@@ -30,11 +67,11 @@ async function generateCard(lecture) {
   for (let i = 1, myrating = lecture["rating"]; i <= 5; i++, myrating--) {
     let star = document.createElement("span");
     if (myrating >= 1) {
-      star.className = "fa fa-star checked";
+      star.className = "bi bi-star-fill";
     } else if (myrating > 0) {
-      star.className = "fa fa-star-half-full";
+      star.className = "bi bi-star-half";
     } else {
-      star.className = "fa fa-star-o";
+      star.className = "bi bi-star";
     }
     rating.appendChild(star);
   }
@@ -57,20 +94,59 @@ async function generateCard(lecture) {
     price.appendChild(price_without_offer);
   }
   card.appendChild(price);
-  document.querySelector(".courseContent .container").appendChild(card);
-}
-const fetchCourse = fetch("http://localhost:3000/" + activeTab).then(
-  (response) => {
-    let jsondata = response.json();
-    return jsondata;
-  }
-);
-fetchCourse.then((course) => {
-  for (let lecture of course["Lectures"]) {
-    generateCard(lecture);
-  }
-});
+  let cardContainer = document.createElement("div");
+  cardContainer.className = "card-container";
+  cardContainer.appendChild(card);
 
+  return cardContainer;
+}
+async function getCourse() {
+  const fetchCourse = await fetch("http://localhost:3000/" + activeTab)
+    .then((response) => {
+      let jsondata = response.json();
+      return jsondata;
+    })
+    .then(async (course) => {
+      const track = document.querySelector(".track");
+      while (await track.lastChild) {
+        await track.removeChild(track.lastChild);
+      }
+      const courseDes = document.querySelector(".courseContent .description");
+      courseDes.children[0].innerHTML = course["header"];
+      courseDes.children[1].innerHTML = course["details"];
+      let courseName = document.querySelector(
+        ".course." + activeTab + " button"
+      ).textContent;
+      courseDes.children[2].textContent = "Explore " + courseName;
+
+      for (let lecture of course["Lectures"]) {
+        track.append(generateCard(lecture));
+      }
+    });
+}
+// course tabs
+const courses = document.querySelectorAll(".courses-tabs .course");
+async function initializeTabs() {
+  for (let i = 0; i < courses.length; i++) {
+    await courses[i].addEventListener("click", async () => {
+      await changeActiveTab(courses[i]);
+    });
+  }
+  changeActiveTab(courses[0]);
+}
+initializeTabs();
+async function changeActiveTab(tab) {
+  // change the color of the previous tab
+  const prev_activeTab = document.querySelector(
+    ".courses-tabs .course." + activeTab + " button"
+  );
+  // change the color of the current tab
+  prev_activeTab.style.color = "#8b8c8e";
+  tab.children[0].style.color = "black";
+
+  activeTab = tab.classList[1];
+  await getCourse();
+}
 // search bar
 function compareStrings(string, substring) {
   string = string.toLowerCase();
@@ -81,29 +157,24 @@ const searchInput = document.querySelector(".search-bar input");
 const searchButton = document.querySelector(".search-bar button");
 function searchData(event) {
   if (event.key !== "Enter" && event != "Enter") return;
-  // get lectures` data
+  // get lectures data
   const searchFetch = fetch("http://localhost:3000/" + activeTab)
-    .then((searchResult) => {
-      return searchResult.json();
+    .then((response) => {
+      return response.json();
     })
-    .then((searchResult) => {
-      // show all lectures
-      for (let lecture of searchResult["Lectures"]) {
-        let temp = document.querySelectorAll(".container .card")[lecture["id"]];
-        temp.style.cssText = "display: inline";
+    .then(async (allCourses) => {
+      // remove all lectures
+      const track = document.querySelector(".track");
+      while (await track.lastChild) {
+        await track.removeChild(track.lastChild);
       }
-
-      // show all courses in case the search value is empty
-      if (searchInput.value.length === 0) return;
-      for (let lecture of searchResult["Lectures"]) {
+      for (let lecture of allCourses["Lectures"]) {
         let title = compareStrings(lecture["title"], searchInput.value);
         let author = compareStrings(lecture["author"], searchInput.value);
         let price = compareStrings(lecture["price"], searchInput.value);
-        console.log(title, author, price);
-        if (title === false && author === false && price === false) {
-          let temp =
-            document.querySelectorAll(".container .card")[lecture["id"]];
-          temp.style.cssText = "display: none";
+
+        if (title || author || price) {
+          track.appendChild(generateCard(lecture));
         }
       }
     })
