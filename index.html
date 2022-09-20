@@ -1,213 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet", href="style.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" , href="style.css" />
     <title>Udemy el-8alaba</title>
+  </head>
 
-</head>
-    
-<body>
-
+  <body>
     <!-- nav bar -->
     <nav>
-        <a href="#"> <img src="images/Udemy.png" alt="udemy logo"/> </a>
-        <a class="item" href="">Categories</a>
+      <a href="#"> <img src="images/Udemy.png" alt="udemy logo" /> </a>
+      <a class="item" href="">Categories</a>
 
-        <form class="search-bar">
-            <a href="#"> <span class="fa fa-search" style="font-size: 20px"></span> </a>
-            <input type="text" placeholder="Search for anything" >
-        </form>
+      <form class="search-bar" onSubmit="return false;">
+        <button
+          type="button"
+          class="fa fa-search"
+          style="font-size: 20px"
+        ></button>
+        <input type="text" placeholder="Search for anything" />
+      </form>
 
-        <a class="item" href="#">Udemy Business</a>
-        <a class="item" href="#">Teach on Udemy</a>
-        <a class="cart" href="#"> <span class="fa fa-shopping-cart" style="font-size: 24px"></span> </a>
+      <a class="item" href="#">Udemy Business</a>
+      <a class="item" href="#">Teach on Udemy</a>
+      <a class="cart" href="#">
+        <span class="fa fa-shopping-cart" style="font-size: 24px"></span>
+      </a>
 
-        <button type="submit" class="login">Log in</button>
-        <button type="submit" class="signup">Sign up</button>
+      <button type="submit" class="login">Log in</button>
+      <button type="submit" class="signup">Sign up</button>
 
-        <button type="submit" class="language"> <span class="fa fa-globe" style="font-size: 24px"></span> </button>
-        
-        <a class="menu"> <span class="fa fa-bars" style="font-size:24px"></span> </a>
-          
+      <button type="submit" class="language">
+        <span class="fa fa-globe" style="font-size: 24px"></span>
+      </button>
+
+      <a class="menu">
+        <span class="fa fa-bars" style="font-size: 24px"></span>
+      </a>
     </nav>
 
     <!-- main -->
     <main>
-        <section class="offer">
-            <div class="card">
-                <h1>New to Udemy? Lucky you.</h1>
-                <p>Courses start at E£ 169.99. Get your new-student offer before it expires</p>
-            </div>
-            <img src="images/clock.png"  alt="clock">
+      <section class="offer">
+        <div class="card">
+          <h1>New to Udemy? Lucky you.</h1>
+          <p>
+            Courses start at E£ 169.99. Get your new-student offer before it
+            expires
+          </p>
+        </div>
+        <img src="images/clock.png" alt="clock" />
+      </section>
+
+      <!-- courses -->
+      <section class="courses">
+        <h1>A board selection of courses</h1>
+        <p>
+          Choose from 185,000 online video courses with new additions published
+          every month
+        </p>
+
+        <!-- courses list -->
+        <div class="courses-tabs">
+          <ul>
+            <li class="Python"><button type="submit">Python</button></li>
+            <li class="Excel"><button type="submit">Excel</button></li>
+            <li class="Web_Development">
+              <button type="submit">Web Development</button>
+            </li>
+            <li class="JavaScript">
+              <button type="submit">JavaScript</button>
+            </li>
+            <li class="DataScience">
+              <button type="submit">Data Science</button>
+            </li>
+            <li class="AWS_Certificate">
+              <button type="submit">AWS Certificate</button>
+            </li>
+            <li class="Drawing"><button type="submit">Drawing</button></li>
+          </ul>
+        </div>
+
+        <!-- course content -->
+        <section class="courseContent">
+          <div class="description">
+            <h2>Expand your career opportunities with Python</h2>
+            <p>
+              Take one of Udemy`s range of Python courses and learn how to code
+              using this in credibly useful language. Its simple syntax and
+              readability makes Python perfect for Flask, Django, data science,
+              and machine learning. You`ll learn how to build everything from
+              games to sites to apps. Choose from a range of courses that will
+              appeal to...
+            </p>
+            <a class="exploreCourse" href="#">Explore Python</a>
+          </div>
+
+          <div class="container"></div>
         </section>
-
-        <!-- courses -->
-        <section class="courses">
-            <h1>A board selection of courses</h1>
-            <p>Choose from 185,000 online video courses with new additions published every month</p>
-
-            <div class="courses-tabs">
-                <!-- courses list -->
-                <ul>
-                    <li class="Python"> <button type="submit">Python</button> </li>
-                    <li class="Ecel"> <button type="submit">Ecel</button> </li> 
-                    <li class="Web-Development"> <button type="submit">Web Development</button> </li> 
-                    <li class="JavaScript"> <button type="submit">JavaScript</button> </li> 
-                    <li class="Data-Science"> <button type="submit">Data Science</button> </li>
-                    <li class="AWS-Certificate"> <button type="submit">AWS Certificate</button> </li> 
-                    <li class="Drawing"> <button type="submit">Drawing</button> </li> 
-                </ul>
-            </div>
-
-            <!-- course content -->
-            <section class="courseContent">
-                <div class="description">
-                    <h2>Expand your career opportunities with Python</h2>
-                    <p>
-                        Take one of Udemy`s range of Python courses and learn how to code using this in credibly useful language. Its
-                        simple syntax and readability makes Python perfect for Flask, Django, data science, and machine learning. You`ll 
-                        learn how to build everything from games to sites to apps. Choose from a range of courses that will appeal to ...
-                    </p>
-                    <a class="exploreCourse" href="#">Explore Python</a>
-                </div>
-
-                <div class="container">
-                    <div class="card">
-                        <button> <img src="images/course1.jpg" alt="course image"/> </button>
-                        <h3 class="title">Learn Python: The Complete Python Programming Course</h3>
-                        <p class="details">Avinash Jain, The Codex</p>
-
-                        <div class="rating">
-                            <span>4.6</span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <label>(2.845)</label>
-                        </div>
-
-                        <div class="price">
-                            <span class="realPrice">E£ 1,199.99</span>
-                            <del class="price-without-offer">E£ 1,679.99</del>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <button> <img src="images/course1.jpg" alt="course image"/> </button>
-                        <h3 class="title">Learn Python: The Complete Python Programming Course</h3>
-                        <p class="details">Avinash Jain, The Codex</p>
-                        <div class="rating">
-                            <span>4.6</span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <label>(2.845)</label>
-                        </div>
-
-                        <div class="price">
-                            <span class="realPrice">E£ 1,199.99</span>
-                            <del class="price-without-offer">E£ 1,679.99</del>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <button> <img src="images/course1.jpg" alt="course image"/> </button>
-                        <h3 class="title">Learn Python: The Complete Python Programming Course</h3>
-                        <p class="details">Avinash Jain, The Codex</p>
-                        <div class="rating">
-                            <span>4.6</span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <label>(2.845)</label>
-                        </div>
-
-                        <div class="price">
-                            <span class="realPrice">E£ 1,199.99</span>
-                            <del class="price-without-offer">E£ 1,679.99</del>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <button> <img src="images/course1.jpg" alt="course image"/> </button>
-                        <h3 class="title">Learn Python: The Complete Python Programming Course</h3>
-                        <p class="details">Avinash Jain, The Codex</p>
-                        <div class="rating">
-                            <span>4.6</span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <label>(2.845)</label>
-                        </div>
-
-                        <div class="price">
-                            <span class="realPrice">E£ 1,199.99</span>
-                            <del class="price-without-offer">E£ 1,679.99</del>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <button> <img src="images/course1.jpg" alt="course image"/> </button>
-                        <h3 class="title">Learn Python: The Complete Python Programming Course</h3>
-                        <p class="details">Avinash Jain, The Codex</p>
-                        <div class="rating">
-                            <span>4.6</span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <label>(2.845)</label>
-                        </div>
-
-                        <div class="price">
-                            <span class="realPrice">E£ 1,199.99</span>
-                            <del class="price-without-offer">E£ 1,679.99</del>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <button> <img src="images/course1.jpg" alt="course image"/> </button>
-                        <h3 class="title">Learn Python: The Complete Python Programming Course</h3>
-                        <p class="details">Avinash Jain, The Codex</p>
-                        <div class="rating">
-                            <span>4.6</span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <label>(2.845)</label>
-                        </div>
-
-                        <div class="price">
-                            <span class="realPrice">E£ 1,199.99</span>
-                            <del class="price-without-offer">E£ 1,679.99</del>
-                        </div>
-                    </div>
-
-                </div>
-
-            </section>
-        </section>
+      </section>
     </main>
 
     <footer>
-        <br />
-        <br />
-        <br />
+      <br />
+      <br />
+      <br />
     </footer>
 
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
